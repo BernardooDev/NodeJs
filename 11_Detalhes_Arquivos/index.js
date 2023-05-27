@@ -5,6 +5,11 @@ fs.stat("arquivo.txt", (err,stats) => {
         console.log(err);
         return
     } else {
-        console.log(stats);
+        console.log(stats.isFile());
+        console.log(stats.isDirectory());
+        console.log(stats.isSymbolicLink());
+        console.log(stats.ctime);
+        console.log(stats.size);
+
     }
 })
